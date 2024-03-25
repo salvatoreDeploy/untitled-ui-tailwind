@@ -6,3 +6,4 @@
 
 [] - lucide-react
 [] - @radix-ui/react-tabs
+[] - Framer Motion
