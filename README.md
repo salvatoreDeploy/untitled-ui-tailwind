@@ -4,6 +4,9 @@
 
 ### Bibliotecas:
 
-[] - lucide-react
-[] - @radix-ui/react-tabs
-[] - Framer Motion
+- lucide-react
+- @radix-ui/react-tabs
+- Framer Motion
+- @formkit/auto-animate
+- tailwind-variants
+

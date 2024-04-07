@@ -2,6 +2,10 @@ import { Mail, UploadCloud, User } from "lucide-react";
 import { InputControl, InputPrefix, InputRoot } from "./components/Input/indext";
 import { MenuTabs } from "./components/MenuTabs";
 import * as FileInput from '@/app/components/FileInput'
+import { SelectComponent } from "./components/Select";
+import { SelectItem } from "./components/Select/SelectItem";
+import { TextAreaEditor } from "./components/TextAreaEditor";
+import { Button } from "./components/Button";
 
 export default function Home() {
   return (
@@ -18,8 +22,8 @@ export default function Home() {
             <span className="text-sm text-zinc-500">Update your photo and personal details here.</span>
           </div>
           <div className="flex items-center gap-2">
-            <button type="button" className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50">Cancel</button>
-            <button type="submit" form="settings" className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700">Save</button>
+            <Button variant="outline">Cancel</Button>
+            <Button variant="primary">Save</Button>
           </div>
         </div>
 
@@ -71,14 +75,22 @@ export default function Home() {
             <label htmlFor="country" className="text-sm font-medium text-zinc-700">
               Country
             </label>
-            <div></div>
+            <SelectComponent placeholder="Select a country">
+              <SelectItem value="br" text="Brazil" />
+              <SelectItem value="us" text="Estados Unidos" />
+              <SelectItem value="jp" text="Japão" />
+            </SelectComponent>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">
             <label htmlFor="timezone" className="text-sm font-medium text-zinc-700">
               Timezone
             </label>
-            <div></div>
+            <SelectComponent placeholder="Select a timezone...">
+              <SelectItem value="br" text="America/Sao-Paulo Time (UTC-03:00:00)" />
+              <SelectItem value="us" text="Pacific Standard Time (UTC-11:00:00)" />
+              <SelectItem value="jp" text="Japao/China Time (UTC-14:00:00)" />
+            </SelectComponent>
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">
@@ -86,7 +98,7 @@ export default function Home() {
               Bio
               <span className="text-sm mt-0.5 text-zinc-500 font-normal block">Write a short introduction.</span>
             </label>
-            <div></div>
+            <TextAreaEditor />
           </div>
 
           <div className="grid gap-3 grid-cols-form pt-5">
@@ -102,8 +114,8 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-1 pt-5">
-            <button type="button" className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm border border-zinc-300 text-zinc-700 hover:bg-zinc-50">Cancel</button>
-            <button type="submit" form="settings" className="rounded-lg px-4 py-2 text-sm font-semibold shadow-sm bg-violet-600 text-white hover:bg-violet-700">Save</button>
+            <Button variant="outline">Cancel</Button>
+            <Button variant="primary">Save</Button>
           </div>
         </form>
       </div>
