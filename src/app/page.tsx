@@ -22,7 +22,7 @@ export default function Home() {
             <span className="text-sm text-zinc-500">Update your photo and personal details here.</span>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="outline">Cancel</Button>
+            <Button variant="ghost">Cancel</Button>
             <Button variant="primary">Save</Button>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-1 pt-5">
-            <Button variant="outline">Cancel</Button>
+            <Button variant="ghost">Cancel</Button>
             <Button variant="primary">Save</Button>
           </div>
         </form>
