@@ -9,4 +9,9 @@
 - Framer Motion
 - @formkit/auto-animate
 - tailwind-variants
+- tailwind-merge
+
+### Tasks:
+
+- [] Adicionar o switcher de thema, usando a biblioteca next-theme.
 

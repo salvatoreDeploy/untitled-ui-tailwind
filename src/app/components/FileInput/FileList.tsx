@@ -12,7 +12,7 @@ export function FileList() {
     <div ref={parent} className="mt-4 space-y-3">
       {files.map(file => {
         return (
-          <FileItem key={file.name} name={file.name} size={file.size} stateProgress="error" />
+          <FileItem key={file.name} name={file.name} size={file.size} stateProgress="complete" />
         )
       })}
     </div>
